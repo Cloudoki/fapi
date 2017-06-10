@@ -11,15 +11,8 @@ from models.tag import Tag
 from __init__ import db
 
 ### API Headers
-auth = base64.b64encode(os.environ.get("HARVEST_CREDS"))
+auth = base64.b64encode(bytes(os.environ.get("HARVEST_CREDS"), 'utf-8'))
 headers = {'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': "Basic " + auth.decode("utf-8")}
-
-# ### MySQL DB
-# engine = create_engine('mysql+pymysql://cloudoki:hovering-rabbits-4455-sudoku@cloudoki.com:3306/cloudoki?charset=utf8')
-# session = sessionmaker()
-# session.configure(bind=engine)
-# Base.metadata.create_all(engine)
-# s = session()
 
 def parse_partners(entries):
     for entry in entries:
