@@ -1,0 +1,3 @@
+.env
+vendors/google_client_secret.json
+*.pyc

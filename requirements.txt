@@ -1,0 +1,8 @@
+requests
+python-dotenv >= 0.6.4
+flask >= 0.8
+flask_restful
+sqlalchemy >= 1.1
+pymysql
+google-api-python-client
+httplib2
